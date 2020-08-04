@@ -192,16 +192,15 @@ function getGifDetails(id) {
     fetch(apiBaseUrl + id + '?api_key=' + apiKey, {
         method: 'GET',
         mode: 'cors',
-        body: form,
 
     })
         .then((res) => {
 
             return res.json();
         }).then(data => {
+            console.log("loalaoslaolsoasl")
             const gifUrl = 'https://media2.giphy.com/media/' + data.data.id + '/giphy.gif';
             //const gifUrl = data.data.url;
-            console.log(data)
             localStorage.setItem('gif' + data.data.id, JSON.stringify(data));
 
             //seteamos el DOM para mostrar nuestro modal de success
@@ -210,8 +209,8 @@ function getGifDetails(id) {
             document.getElementById('share-modal-preview').src = data.data.images.fixed_height.url;
 
             preview.classList.remove('hidden');
-            main.classList.add('gray');
-            nav.classList.add('gray');
+            //main.classList.add('gray');
+            //nav.classList.add('gray');
 
             download.href = gifUrl;
 
