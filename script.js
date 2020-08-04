@@ -79,14 +79,14 @@ function changeButtonBuscarD() {
 
     if (inputBusqueda.value === '' && theme == 'day') {
         btnBuscar.disabled = true;
-        lupa.src = '/assets/lupa_inactive.svg';
+        lupa.src = './assets/lupa_inactive.svg';
         textoBuscar.style.color = '#B4B4B4'
     }
     else if ((inputBusqueda.value !== '' && theme == 'day')) {
         btnBuscar.disabled = false;
         btnBuscar.classList.add('button-buscar-on');
         textoBuscar.style.color = '#110038';
-        lupa.src = '/assets/lupa.svg';
+        lupa.src = './assets/lupa.svg';
 
     }
 
@@ -97,14 +97,14 @@ function changeButtonBuscarN() {
 
     if (inputBusqueda.value === '' && theme == 'night') {
         btnBuscar.disabled = true;
-        lupa.src = '/assets/Combined_Shape.svg';
+        lupa.src = './assets/Combined_Shape.svg';
         textoBuscar.style.color = '#8F8F8F';
     }
     else if (inputBusqueda.value !== '' && theme == 'night') {
         btnBuscar.disabled = false;
         btnBuscar.classList.add('button-buscar-on');
         textoBuscar.style.color = '#FFFFFF';
-        lupa.src = '/assets/lupa_light.svg';
+        lupa.src = './assets/lupa_light.svg';
 
     }
 
@@ -138,36 +138,36 @@ mostrarDesplegable.addEventListener('click', () => {
 function validateThemes() {
     let theme = localStorage.getItem('tema');
     if (theme == 'day') {
-        changeTheme.setAttribute('href', '/styles/sailor-day.css');
-        logo.src = '/assets/gifOF_logo.png';
-        favicon.href = '/assets/gifOF_logo.png';
+        changeTheme.setAttribute('href', './styles/sailor-day.css');
+        logo.src = './assets/gifOF_logo.png';
+        favicon.href = './assets/gifOF_logo.png';
     }
     else {
-        changeTheme.setAttribute('href', '/styles/sailor-night.css')
-        logo.src = '/assets/gifOF_logo_dark.png';
-        lupa.src = '/assets/Combined_Shape.svg';
-        favicon.href = '/assets/gifOF_logo_dark.png';
+        changeTheme.setAttribute('href', './styles/sailor-night.css')
+        logo.src = './assets/gifOF_logo_dark.png';
+        lupa.src = './assets/Combined_Shape.svg';
+        favicon.href = './assets/gifOF_logo_dark.png';
     }
 }
 validateThemes();
 
 //   CAMBIAR TEMAS
 sailorDay.addEventListener('click', () => {
-    changeTheme.setAttribute('href', '/styles/sailor-day.css')
+    changeTheme.setAttribute('href', './styles/sailor-day.css')
     desplegable.classList.toggle('hidden');
     themePick = localStorage.setItem('tema', 'day');
-    logo.src = '/assets/gifOF_logo.png';
-    favicon.href = '/assets/gifOF_logo.png';
+    logo.src = './assets/gifOF_logo.png';
+    favicon.href = './assets/gifOF_logo.png';
 });
 
 sailorNight.addEventListener('click', () => {
-    changeTheme.setAttribute('href', '/styles/sailor-night.css')
+    changeTheme.setAttribute('href', './styles/sailor-night.css')
     desplegable.classList.toggle('hidden');
     themePick = localStorage.setItem('tema', 'night');
-    logo.src = '/assets/gifOF_logo_dark.png';
-    lupa.src = '/assets/Combined_Shape.svg';
+    logo.src = './assets/gifOF_logo_dark.png';
+    lupa.src = './assets/Combined_Shape.svg';
     textoBuscar.style.color = '#8F8F8F';
-    favicon.href = '/assets/gifOF_logo_dark.png';
+    favicon.href = './assets/gifOF_logo_dark.png';
 });
 
 
