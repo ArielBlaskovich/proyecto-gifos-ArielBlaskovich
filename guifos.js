@@ -51,7 +51,7 @@ function getStreamAndRecord() {
             record.addEventListener('click', () => {
 
                 recording = !recording;
-                document.getElementById('camera-button').src = '/assets/recording.svg';
+                document.getElementById('camera-button').src = './assets/recording.svg';
 
                 if (recording === true) {
                     this.disabled = true;
@@ -192,16 +192,15 @@ function getGifDetails(id) {
     fetch(apiBaseUrl + id + '?api_key=' + apiKey, {
         method: 'GET',
         mode: 'cors',
-        body: form,
 
     })
         .then((res) => {
 
             return res.json();
         }).then(data => {
+            console.log("loalaoslaolsoasl")
             const gifUrl = 'https://media2.giphy.com/media/' + data.data.id + '/giphy.gif';
             //const gifUrl = data.data.url;
-            console.log(data)
             localStorage.setItem('gif' + data.data.id, JSON.stringify(data));
 
             //seteamos el DOM para mostrar nuestro modal de success
@@ -210,8 +209,8 @@ function getGifDetails(id) {
             document.getElementById('share-modal-preview').src = data.data.images.fixed_height.url;
 
             preview.classList.remove('hidden');
-            main.classList.add('gray');
-            nav.classList.add('gray');
+            //main.classList.add('gray');
+            //nav.classList.add('gray');
 
             download.href = gifUrl;
 
@@ -321,19 +320,19 @@ mostrarDesplegable.addEventListener('click', () => {
 // CAMBIAR TEMAS
 
 sailorDay.addEventListener('click', () => {
-    changeTheme.setAttribute('href', '/styles/sailor-day.css')
+    changeTheme.setAttribute('href', './styles/sailor-day.css')
     desplegable.classList.toggle('hidden');
     themePick = localStorage.setItem('tema', 'day');
-    logo.src = '/assets/gifOF_logo.png';
-    favicon.href = '/assets/gifOF_logo.png';
+    logo.src = './assets/gifOF_logo.png';
+    favicon.href = './assets/gifOF_logo.png';
 });
 
 sailorNight.addEventListener('click', () => {
-    changeTheme.setAttribute('href', '/styles/sailor-night.css')
+    changeTheme.setAttribute('href', './styles/sailor-night.css')
     desplegable.classList.toggle('hidden');
     themePick = localStorage.setItem('tema', 'night');
-    logo.src = '/assets/gifOF_logo_dark.png';
-    favicon.href = '/assets/gifOF_logo_dark.png';
+    logo.src = './assets/gifOF_logo_dark.png';
+    favicon.href = './assets/gifOF_logo_dark.png';
 });
 
 // VALIDAR TEMA LOCAL STORAGE
@@ -341,16 +340,16 @@ sailorNight.addEventListener('click', () => {
 function validateThemes() {
     let theme = localStorage.getItem('tema');
     if (theme == 'day') {
-        changeTheme.setAttribute('href', '/styles/sailor-day.css');
-        logo.src = '/assets/gifOF_logo.png';
-        favicon.href = '/assets/gifOF_logo.png';
-        document.getElementById('camera-button').src = '/assets/camera.svg';
+        changeTheme.setAttribute('href', './styles/sailor-day.css');
+        logo.src = './assets/gifOF_logo.png';
+        favicon.href = './assets/gifOF_logo.png';
+        document.getElementById('camera-button').src = './assets/camera.svg';
     }
     else {
-        changeTheme.setAttribute('href', '/styles/sailor-night.css')
-        logo.src = '/assets/gifOF_logo_dark.png';
-        favicon.href = '/assets/gifOF_logo_dark.png';
-        document.getElementById('camera-button').src = '/assets/camera_light.svg';
+        changeTheme.setAttribute('href', './styles/sailor-night.css')
+        logo.src = './assets/gifOF_logo_dark.png';
+        favicon.href = './assets/gifOF_logo_dark.png';
+        document.getElementById('camera-button').src = './assets/camera_light.svg';
     }
 }
 validateThemes();
