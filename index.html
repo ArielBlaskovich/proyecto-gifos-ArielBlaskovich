@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GifOS Ariel Blaskovich</title>
+    <link id="favicon" rel="icon" type="image/jpg" href="./assets/gifOF_logo.png">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link id="change-theme" rel="stylesheet" href="/styles/sailor-day.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+
+
+    <div id="barra-arriba" class="first-bar">
+        <p class="welcome-gifOs font-family-white"> ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs
+            están.////// Número
+            de visitas:
+            12.765.803</p>
+    </div>
+
+    <div class="container-window">
+        <!-- Logo y botones  -->
+        <nav class="nav-bar">
+            <div class="logo-gifos-container">
+                <img id="logo" src="/assets/gifOF_logo.png" alt="Logo GifOS" class="logo-gifos">
+            </div>
+            <div class="container-botones">
+                <a href="/guifos.html" class="button-nav button-crear">
+                    <p class="font-btn-nav button-text">Crear Gifos</p>
+                </a>
+                <div class="container-elegir-dropdown">
+                    <button class="button-nav button-elegir font-btn-nav button-text">
+                        Elegir Tema
+                    </button>
+                    <button id="dropdown" class="button-nav button-dropdown"><img class="dropdown"
+                            src="/assets/dropdown.svg" alt="dropdown"></button>
+                    <div id="container-desplegable" class="container-elegir-tema-desp hidden">
+                        <button id="sailorDay" class="font-family2 boton-cambiar-tema">Sailor Day</button>
+                        <button id="sailorNight" class="font-family2 boton-cambiar-tema">Sailor
+                            Night</button>
+                    </div>
+                </div>
+                <a href="/guifos.html" id="misGuifos" class="mis-guifos font-btn-nav">Mis Guifos</a>
+            </div>
+        </nav>
+        <!-- Barra de busqueda -->
+        <div class="buscar-container">
+            <div class="barra-buscar">
+                <p class="font-family-bold title-buscar"> Buscar</p>
+            </div>
+            <div onblur="showOff()" class="container-input-buscar">
+                <input onblur="validateWhiteInput()" oninput="search()" id="input-busqueda" name="search-bar"
+                    type="text" class="input-buscar font-family2"
+                    placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                <button id="btn-buscar" class="button-buscar ">
+                    <img id="lupa" src="/assets/lupa_inactive.svg" alt="lupa">
+                    <span id="buscar-lupa" class="p-buscar font-family2">Buscar</span>
+                </button>
+            </div>
+            <div id="container-sug-busqueda" class="container-sugerencias-busqueda sug-style" onblur="showOff()">
+                <a href="#titulo-buscado" id="btn1" class="boton-sugerido-busqueda">
+                    <p class="font-family2 p-suggest" id="sug1">Unicorns</p>
+                </a>
+                <a href="#titulo-buscado" id="btn2" class="boton-sugerido-busqueda">
+                    <p class="font-family2 p-suggest" id="sug2">Kittens</p>
+                </a>
+                <a href="#titulo-buscado" id="btn3" class="boton-sugerido-busqueda">
+                    <p class="font-family2 p-suggest" id="sug3">Puppies</p>
+                </a>
+            </div>
+        </div>
+        <!-- SUGERENCIAS -->
+        <section id="bloque-hoy-te-sugerimos" class="section-hoy-te-sugerimos">
+            <div class="hoy-te-sugerimos bloque-de-titulo">
+                <p id="titulo-busqueda" class="font-family2">Hoy te sugerimos:</p>
+            </div>
+            <div id="contenedor-sugerimos" class="container-hoy-te-sugerimos">
+                <div class="gif-hoy-te-sugerimos">
+                    <div class="barra-arriba-gif barra-buscar">
+                        <p class="font-tags titulo-randoms"> Prueba</p>
+                        <img src="/assets/button3.svg" class="boton-cerrar-gif" alt="boton cerrar">
+                    </div>
+                    <div class="containerOfEachGifSuggest">
+
+                    </div>
+                    <button class="boton-ver-mas font-family-white">
+                        Ver más…
+                    </button>
+                </div>
+                <div class="gif-hoy-te-sugerimos">
+                    <div class="barra-arriba-gif barra-buscar">
+                        <p class="font-tags titulo-randoms"> Prueba</p>
+                        <img src="/assets/button3.svg" class="boton-cerrar-gif" alt="boton cerrar">
+                    </div>
+                    <div class="containerOfEachGifSuggest">
+
+                    </div>
+                    <button class="boton-ver-mas font-family-white">
+                        Ver más…
+                    </button>
+                </div>
+                <div class="gif-hoy-te-sugerimos">
+                    <div class="barra-arriba-gif barra-buscar">
+                        <p class="font-tags titulo-randoms"> Prueba</p>
+                        <img src="/assets/button3.svg" class="boton-cerrar-gif" alt="boton cerrar">
+                    </div>
+                    <div class="containerOfEachGifSuggest">
+
+                    </div>
+                    <button class="boton-ver-mas font-family-white">
+                        Ver más…
+                    </button>
+                </div>
+                <div class="gif-hoy-te-sugerimos">
+                    <div class="barra-arriba-gif barra-buscar">
+                        <p class="font-tags titulo-randoms"> Prueba</p>
+                        <img src="/assets/button3.svg" class="boton-cerrar-gif" alt="boton cerrar">
+                    </div>
+                    <div class="containerOfEachGifSuggest">
+
+                    </div>
+                    <button class="boton-ver-mas font-family-white">
+                        Ver más…
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- TENDENCIAS -->
+        <div class="section-tendencias-resultados">
+            <div id="titulo-buscado" class="bloque-de-titulo mostrador-de-busqueda">
+                <p id="contenido-titulo" class="font-family2">Tendencias:</p>
+            </div>
+            <div id="container-tendencias" class="contenedor-gif-tendencias">
+
+            </div>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

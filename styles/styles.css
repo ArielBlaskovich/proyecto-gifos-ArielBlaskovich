@@ -1,0 +1,592 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+:root{
+    --hover-outline: 2px dotted #110038;
+}
+  .body{
+    width: 100%;
+  }
+
+.header{
+    display: flex;
+    justify-content: space-around;
+  }
+a:link, a:visited, a:active {
+    text-decoration: none;
+    
+}
+.first-bar{
+    width: 100%;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.guifos-instructions .first-bar{
+    
+    border: 1px solid #B4B4B4;
+}
+.welcome-gifOs{
+    font-size: 12px;   
+    padding-left: 15px;
+}
+.container-window{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+/* Estilo de fuente */
+.font-family-white{
+    font-family: 'Chakra Petch', sans-serif;
+    color: #ffffff;
+}
+.font-family2{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+    color: #110038; 
+    line-height: 18px;
+}
+.font-family-bold{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.logo-gifos-container{
+    margin-top: 39px;
+}
+.nav-bar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+/* Botones Crear Guifos y Elegir Temas */
+.button-nav{
+    height: 36px;
+}
+.container-botones{
+    display: flex;
+    align-items: center;
+}
+.button-crear{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 144px;
+    margin-right: 16px;
+}
+.button-elegir{
+    width: 131px;
+}
+.button-dropdown{
+    width: 36px;
+    height: 36px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-elegir-dropdown{
+    display: flex;
+    position: relative;
+}
+.container-elegir-tema-desp{
+    width: 170px;
+    height: 102px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    z-index: 10;
+    position: absolute;
+    top: 37px;
+}
+.boton-cambiar-tema{
+    width: 150px;
+    height: 36px;
+}
+.boton-cambiar-tema::first-letter{
+    text-decoration: underline;
+}
+
+.mis-guifos{
+    padding: 10px 25px 10px 5px;
+}
+.mis-guifos::first-letter{
+    text-decoration: underline;
+}
+/* Barra de busqueda */
+.buscar-container{
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.container-input-buscar{
+    height: 72px;
+    display: flex;
+    align-items: center;
+}
+.input-buscar{
+    width: 90%;
+    height: 48px;
+    margin-left: 15px;
+    margin-right: 8px;
+    padding-left: 20px;
+    line-height: 22px;
+    
+}
+.input-buscar::-webkit-input-placeholder{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+.button-buscar{
+    width: 102px;
+    height: 36px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+
+}
+.p-buscar{
+    color: #B4B4B4;
+}
+/* Div sugerenicas de busqueda */
+.container-sugerencias-busqueda{
+    display: none;
+    width: 100%;
+    height: 160px;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    position: absolute;
+    top: 92px;
+    z-index: 500;
+    
+    
+}
+.sug-style{
+    
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.boton-sugerido-busqueda{
+    width: 88.6%;
+    height: 36px;
+    margin-left: 1.4%;
+    display: flex;
+    align-items: center;
+}
+.p-suggest{
+    padding-left: 10px;
+}
+
+/* Hoy te sugerimos */
+.section-hoy-te-sugerimos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.hoy-te-sugerimos{
+    width: 100%;
+    height: 32px;
+    margin-top: 64px;
+}
+.bloque-de-titulo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+.container-hoy-te-sugerimos{
+    width: 96%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.gif-hoy-te-sugerimos{
+    width: 23.5%;
+    height: 313px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.barra-buscar{
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+.title-buscar{
+    padding-left: 10px;
+}
+.barra-arriba-gif{
+    width: 96%;
+    height: 24px;
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+.boton-cerrar-gif{
+    margin-right: 4px;
+}
+.section-tendencias-resultados, .contenedor-gif-tendencias{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+.mostrador-de-busqueda{
+    width: 100%;
+    height: 32px;
+    margin-top: 68px;
+}
+.boton-ver-mas{
+    width: 81px;
+    height: 34px;
+    z-index: 1000;
+    position: absolute;
+    left: 10%;
+    top: 80%;
+}
+/* Tamaño de los gifs suggeridos */
+.containerOfEachGifSuggest{
+    width: 95%;
+    height: 88%;
+}
+.styleOfGifs{
+    width: 100%;
+    height: 100%;
+}
+.styleOfGifs:hover{
+    outline: var(--hover-outline);
+    outline-offset: -2px;
+}
+
+.containerGifSearched{
+    position: relative;
+    width: 25%;
+    height: 313px;
+    padding: 5px;
+}
+.tags{
+    position: absolute;
+    display: none;
+    top: 91%;
+    left: 8px;
+    width: 95%;
+    height: 20px;
+}
+.containerGifSearched:hover{
+    width: 24.5%;
+    height: 310px;
+}
+.font-tags{
+    font-family: 'Chakra Petch', sans-serif;
+    text-indent: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 25px;
+}
+
+/* ESTILOS MIS GUIFOS */
+.container-arrow-logo{
+    display: flex;
+    justify-content: start;
+}
+.container-arrow-logo a{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.main-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.header-guifos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    
+}
+.guifos-instructions{
+    width: 684px;
+    height: 386px;
+    margin-top: 10%;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    position: relative;
+}
+.retro-icon{
+    width: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.title-info{
+    margin-left: 50px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+.pre-instructions{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+}
+#pre-upload-text p{
+    padding-left: 10px;
+}
+.upload-button-wrapper{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+}
+.info-button{
+    width: 140px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    cursor: pointer;
+}
+.info-button2{
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    cursor: pointer;
+}
+.timer-container{
+    width: 120px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+.gallery-container{
+    width: 100%;
+    position: relative;
+    top: 200px;
+}
+.results-wrapper{
+    width: 100%;
+}
+.major-container{
+    width: 600px;
+    height: 560px;
+    margin-top: 100px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+.progress-bar{
+    display: flex;
+    background: #B4B4B4;
+    box-shadow: inset 2px 2px 0 0 #E6E6E6, inset -2px -2px 0 0 #000000;
+    border: 1px solid #979797;
+    margin: 15px;
+}
+.progress-bar-item{
+    width: 15px;
+    height: 18px;
+    border: 0.1px solid #110038;
+    background: #999999;
+}
+.progress-bar-item-active{
+    background: #F7C9F3;
+}
+.video-upload-message{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 400px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+.globo-subiendo{
+    width: 300px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.globo-subiendo img{
+    margin: 25px 50px 15px 50px;
+}
+
+.globo-subiendo p{
+    position: relative;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #110038; 
+    line-height: 18px;
+}
+.p-strike{
+    font-size: 14px;
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgba(17,0,56,0.64);
+    font-weight: 500;
+    line-height: 14px;
+    margin-bottom: 50px;
+
+    
+}
+.p-strike span{
+    text-decoration: line-through;
+}
+.cancelar{
+    position: absolute;
+    right: 31%;
+    top: 730px;
+
+}
+.gray{
+    filter: grayscale(100%);
+}
+.copy-success{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 18px;
+    width: 160px;
+    height: 45px;
+    border: solid 2px blue;
+}
+
+
+.video-stream{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 8px 20px 8px;
+    width: 100%;
+    height: 90%;   
+}
+.record-button-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.record-button-container{
+    display: flex;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.timer-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 20px;
+}
+.video{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -3px -3px 0 0 #E6E6E6, inset 3px 3px 0 0 #000000;
+    padding: 2px;
+}
+.video-preview{
+    width: 100%;
+    height: 100%;
+}
+.share-modal-wrapper{
+    width: 650px;
+    height: 400px;
+    margin: 100px;
+    box-shadow: inset -5px -5px 0 0 #B4B4B4, inset 5px 5px 0 0 #FFFFFF;
+}
+.box-header{
+    width: 100%;
+    display: flex;
+}
+.barra-finish{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.share-modal{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 15px 20px 15px;
+    flex-wrap: wrap;
+}
+.share-img{
+    width: 45%;
+    height: 60%;
+    display: flex;
+}
+.share-button{
+    cursor: pointer;
+    width: 220px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    
+
+}
+.imagen-prueba{
+    width: 100%;
+    height: 100%;
+    background-color: indigo;
+    border: 2px solid red;
+}
+.gif-options{
+    width: 45%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+.gif-options h2{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #110038; 
+    line-height: 18px;
+}
+.share-done{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.hidden{
+    display: none;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="favicon" rel="icon" type="image/jpg" href="/assets/gifOF_logo.png">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link id="change-theme" rel="stylesheet" href="/styles/sailor-day.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <title>Mis GuifOs</title>
+</head>
+
+<body class="body">
+    <header class="header" id="nav">
+        <div id="barra-arriba" class="first-bar">
+            <p class="welcome-gifOs font-family-white"> ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs
+                están.////// Número
+                de visitas:
+                12.765.803</p>
+        </div>
+    </header>
+    <div class="container-window">
+        <section class="main-container" id="main">
+            <header class="header-guifos">
+                <div class="container-arrow-logo">
+                    <!-- div flecha volver  -->
+                    <a href="./index.html">
+                        <img src="/assets/arrow.svg" alt="arrow">
+                    </a>
+                    <div>
+                        <img id="logo" src="/assets/gifOF_logo.png" alt="Logo GifOS">
+                        <h3>zoom clase 36 2:17:20</h3>
+                        <h3>repaso del codigo js 2:19:40</h3>
+                    </div>
+                </div>
+                <div class="container-elegir-dropdown">
+                    <button class="button-nav button-elegir font-btn-nav button-text">
+                        Elegir Tema
+                    </button>
+                    <button id="dropdown" class="button-nav button-dropdown"><img class="dropdown"
+                            src="/assets/dropdown.svg" alt="dropdown"></button>
+                    <div id="container-desplegable" class="container-elegir-tema-desp hidden">
+                        <button id="sailorDay" class="font-family2 boton-cambiar-tema">Sailor Day</button>
+                        <button id="sailorNight" class="font-family2 boton-cambiar-tema">Sailor
+                            Night</button>
+                    </div>
+                </div>
+            </header>
+            <div class="guifos-instructions" id="gif-instructions">
+                <div class="first-bar" id="pre-upload-text">
+                    <p class="font-family-bold">Crear Guifos</p>
+                </div>
+                <div class="upload-intro">
+                    <div>
+                        <img class="retro-icon" src="/assets/window_img.png" alt="retro-computer">
+                        <b class="title-info"> Aquí podrás crear tus propios guifos</b>
+                    </div>
+                    <pre class="pre-instructions">
+
+                        Crear tu <b>guifo</b> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos
+                        personalizados. Los pasos para crear tu guifo son:
+                                    
+                        <b>1)</b> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)
+
+                        <b>2)</b> Capturar tu momento guifo
+
+                        <b>3)</b> Revisar el momento
+
+                        <b>4)</b> Listo para subir y compartir!
+
+                        ¿Quieres comenzar a crear tu <b>guifo</b> ahora?
+                    </pre>
+
+                    <div class="upload-button-wrapper">
+                        <a class="info-button button-inactive font-btn-nav" href="/index.html">Cancelar</a>
+                        <div class="info-button button-active font-btn-nav" id="start">Comenzar</div>
+                    </div>
+                </div>
+            </div>
+            <div id="major" class="major-container hidden">
+                <div class="upload-video-container hidden" id="pre-upload-video">
+                    <div class="first-bar font-family-bold" id="dinamic-text-recorder">Crear Guifos</div>
+                    <div class="video-stream">
+                        <video class="video"></video>
+                        <img class="video-preview hidden" src="#" id="preview" alt="gif-preview" />
+                        <div class="video-upload-message hidden" id="upload-msg">
+                            <div class="globo-subiendo">
+                                <img src="/assets/globe_img.png" alt="globo_carga">
+                                <p>Estamos subiendo tu guifo</p>
+                                <p>Esto puede tomar algunos minutos...</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                                <div class="progress-bar-item"></div>
+                            </div>
+                            <p class="p-strike">Tiempo restante: <span>38 años</span> algunos minutos</p>
+                            <div class="info-button font-btn-nav cancelar" onclick="cancelFetch()" id="cancel">Cancelar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="record-button-wrapper">
+                    <div id="timer" class="timer-container"></div>
+                    <div class="record-button-container" id="video-record-buttons">
+                        <div class="info-button2 button-active" id="stop">
+                            <!-- buscar en el video si hay alguna clase header-dropdown -->
+                            <img src="/assets/camera.svg" id="camera-button" alt="icon-camera">
+                        </div>
+                        <div class="info-button button-active font-btn-nav" id="record">Capturar</div>
+                    </div>
+                    <div class="record-button-container hidden" id="video-upload-buttons">
+                        <div class="info-button button-inactive font-btn-nav" id="restart">Repetir Captura</div>
+                        <div class="info-button button-active font-btn-nav" id="upload">Subir Guifo</div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="share-modal-wrapper hidden" id="share-modal-wrapper">
+                <div class="box-header">
+                    <div class="first-bar font-family-bold barra-finish">Guifo Subido con Exito
+                        <img src="/assets/button3.svg" id="finish" alt="exit">
+                    </div>
+
+                </div>
+                <div class="share-modal" id="share-modal">
+                    <div class="share-img">
+                        <img class="imagen-prueba" src="#" id="share-modal-preview" alt="preview">
+                    </div>
+                    <div class="gif-options">
+                        <h2>Guifo creado con éxito</h2>
+                        <div class=" font-btn-nav share-button" id="copy"> Copiar enlace Guifo
+                        </div>
+                        <p id="link-success" class="hidden">Enlace copiado!</p>
+                        <a class="font-btn-nav share-button" href="#" id="download" download="mi-guifo.gif"
+                            target="_blank">Descargar Guifo</a>
+                        <div class="font-btn-nav share-button" id="embed">Embeber Guifo</div>
+                    </div>
+                </div>
+                <div class="share-done">
+                    <div class="info-button button-active font-btn-nav" id="share-done">Listo
+                    </div>
+                </div>
+                <div id="copy-success" class="copy-success hidden"></div>
+            </div>
+            <div class="gallery-container">
+                <div class="results-wrapper" id="gallery">
+                    <div class="bloque-de-titulo mostrador-de-busqueda">
+                        <p class="font-family2">Mis Guifos</p>
+                    </div>
+                    <div class="results-container" id="results"></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script src="/guifos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
+</body>
+
+</html>

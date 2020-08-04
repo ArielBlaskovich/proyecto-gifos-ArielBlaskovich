@@ -1,0 +1,212 @@
+:root{
+    --gradiente-day:  linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+    --border-day:  1px solid #110038;
+    --background-gris: #B4B4B4;
+    --hover-outline: 2px dotted #110038;
+    --bg-btn-nav: #EE3EFE;
+    --box-shadow-btn-nav: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+    --hv-bg-btn-nav: #CE36DB;
+    --box-shadow-container-themes: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+    --bg-btn-theme:  #CCCCCC;
+    --border-btn-theme:1px solid rgba(51,53,143,0.20);
+    --hv-bg-btn-theme: #2E32FB;
+    --hv-bg-btn-sug: #CCCCCC;
+    --border-container-buscar: 2px solid #E6E6E6; 
+    --boxs-container-buscar: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #f5f1f1; 
+    --color-p-buscar: #8F8F8F;
+    --bg-ver-mas: #2E32FB;
+    --border-ver-mas: 1px solid #4C2F99;
+    --box-shadow-ver-mas:  inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+    --hv-bg-btn-ver-mas: #2629CC;
+    
+    
+}
+.body{
+    background-color: #110038;
+}
+.first-bar{
+    background-image: var(--gradiente-day);
+    box-shadow: 0 1px 0 0 #110038;
+}
+/* Estilo de fuente */
+.font-family-white{
+    font-family: 'Chakra Petch', sans-serif;
+    color: #ffffff;
+}
+.font-family2{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+    color: #110038; 
+    line-height: 18px;
+}
+.font-family-bold{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+/* Botones Crear Guifos y Elegir Temas */
+.button-nav{
+    background: var(--bg-btn-nav);
+    border: var(--border-day);
+    box-shadow: var(--box-shadow-btn-nav);
+}
+.button-crear:hover, .button-elegir:hover, .button-dropdown:hover{
+    cursor: pointer;
+    background: var(--hv-bg-btn-nav);
+    outline: var(--hover-outline);
+    outline-offset: -5px;
+}
+.font-btn-nav{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF; 
+    line-height: 18px;
+    font-weight: 500;
+}
+.mis-guifos:hover{
+    cursor: pointer;
+    outline: 2px dotted #FFFFFF;
+    outline-offset: -5px;
+}
+.button-crear:active, .button-elegir:active, .button-dropdown:active, .button-buscar:active{
+    cursor: pointer;
+    background: var(--hv-bg-btn-nav);
+    outline: var(--hover-outline);
+    outline-offset: -5px;
+}
+
+.container-elegir-tema-desp{
+    background: var(--background-gris);
+    box-shadow: var(--box-shadow-container-themes);
+}
+.boton-cambiar-tema{
+    background: var(--bg-btn-theme);
+    border: 1px solid #808080; 
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+.boton-cambiar-tema:hover{
+    cursor: pointer;
+    border: var(--border-btn-theme);
+    background: var(--hv-bg-btn-theme);
+    outline: var(--hover-outline);
+    outline-offset: -5px;
+}
+
+/* Barra de busqueda */
+.barra-buscar{
+    background-image: var(--gradiente-day);
+}
+
+.container-input-buscar{
+    background: var(--background-gris);
+    box-shadow: var(--box-shadow-container-themes); 
+}
+.buscar-container{
+    border: var(--border-container-buscar);
+    box-shadow: var(--boxs-container-buscar);
+}
+/* no cambia en sailor night (input-buscar)*/
+.input-buscar{
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+.input-buscar::-webkit-input-placeholder{
+    color: var(--color-p-buscar);
+}
+.button-buscar{
+    background: var(--background-gris);
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+.button-buscar:hover{
+    outline: 1px dotted #110038;
+    outline-offset: -4px;
+    background: var(--hv-bg-btn-nav);
+}
+.button-buscar:disabled{
+    background: var(--background-gris);
+    cursor: default;
+}
+.button-buscar-on{
+    background: var(--bg-btn-nav);
+}
+.p-buscar{
+    color: var(--color-p-buscar);
+}
+.container-sugerencias-busqueda{
+    background: var(--background-gris);
+    box-shadow: var(--box-shadow-container-themes);
+}
+.boton-sugerido-busqueda{
+    background: var(--bg-btn-theme);
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+.boton-sugerido-busqueda:hover{
+    outline: var(--hover-outline);
+    outline-offset: -5px;
+    background: var(--background-gris);
+}
+
+.bloque-de-titulo{
+background: #FFFAFE;
+border: 1px solid #2E32FB;
+box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+}
+.gif-hoy-te-sugerimos{
+    background: var(--background-gris);
+    box-shadow: var(--box-shadow-container-themes);
+}
+.boton-ver-mas{
+    background: var(--bg-ver-mas);
+    border: var(--border-ver-mas);
+    box-shadow: var(--box-shadow-ver-mas);
+}
+.boton-ver-mas:hover{
+    cursor: pointer;
+    outline: var(--hover-outline);
+    outline-offset: -5px;
+    background: var(--hv-bg-btn-ver-mas);
+}
+.btn-buscar-change{
+    background: #EE3EFE;
+    border: var(--border-day);
+    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+.p-buscar-change{
+    color: #FFFFFF;
+}
+.containerGifSearched:hover{
+    background: var(--background-gris);
+    box-shadow: inset -2px -2px 0 0 #5C5C5C, inset 2px 2px 0 0 #FFFFFF;
+}
+.tags{
+    background: var(--gradiente-day);
+}
+.button-inactive{
+    background: #110038;
+    border: 2px solid #B4B4B4;
+    box-shadow: inset -1px -1px 0 0 #5C5C5C, inset 1px 1px 0 0 #FFF4FD;   
+}
+.button-active{
+    background: var(--bg-btn-nav);
+    border: 2px solid #B4B4B4;
+    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+.button-listo{
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+    color: white;
+}
+.share-button{
+    background: var(--hv-bg-btn-theme);
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+.button-inactive:hover, .button-active:hover, .button-listo:hover, .share-button:hover{
+    outline: 2px dotted white;
+    outline-offset: -4px;
+}
